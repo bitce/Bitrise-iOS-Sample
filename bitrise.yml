@@ -18,7 +18,7 @@ workflows:
     - recreate-user-schemes@1:
         inputs:
         - project_path: "$BITRISE_PROJECT_PATH"
-    - xcode-archive@3:
+    - xcode-archive:
         inputs:
         - project_path: "$BITRISE_PROJECT_PATH"
         - scheme: "$BITRISE_SCHEME"
@@ -27,7 +27,7 @@ workflows:
         - compile_bitcode: 'no'
         - upload_bitcode: 'no'
         - team_id: "$BITRISE_TEAM"
-        - export_method: "$BITRISE_EXPORT_METHOD"
+        - export_method: app-store
     - deploy-to-bitrise-io@1: {}
     - cache-push@2: {}
   primary:
