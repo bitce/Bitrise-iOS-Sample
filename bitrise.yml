@@ -28,7 +28,7 @@ workflows:
         - compile_bitcode: 'no'
         - upload_bitcode: 'no'
         - team_id: $BITRISE_TEAM
-        - export_method: app-store
+        - export_method: "app-store"
         is_always_run: true
     - deploy-to-bitrise-io@1: {}
     - cache-push@2: {}
